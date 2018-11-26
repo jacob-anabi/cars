@@ -1,8 +1,12 @@
 # Cars
 *@author Jacob Anabi
+
 @date 2018-10-30
+
 @version 1.0
+
 @id 2294644
+
 @Class CPSC 298-nix*
 
 # Description
