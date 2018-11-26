@@ -1,13 +1,13 @@
 # Cars
-*@author Jacob Anabi
+*@author Jacob Anabi*
 
-@date 2018-10-30
+*@date 2018-10-30*
 
-@version 1.0
+*@version 1.0*
 
-@id 2294644
+*@id 2294644*
 
-@Class CPSC 298-nix*
+*@Class CPSC 298-nix*
 
 # Description
 The user will be presented with a menu of three options. The user can 
