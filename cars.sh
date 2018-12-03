@@ -6,13 +6,15 @@
 #@id 2294644
 #@class CPSC 298-nix
 
+# ask for choice
 echo Would you like to:
 echo ac. Add a car
 echo lc. List the cars in the inventory file
 echo q. Quit the program
 read choice
 
-while [[ "$choice" -eq "ac" ]] || [[ "$choice" -eq "lc" ]]
+# checking what the choice is
+while [[ "$choice" != "q" ]]
 do
 	case "$choice" in
 		"ac")
@@ -24,19 +26,21 @@ do
 			       echo "Enter a year: "
 			       read year
 			done
+			# ask for car info
 			echo Enter make:
 			read make
 			echo Enter model:
 			read model
-			info="$year:$make:$model"
-			echo $'\n' >> My_old_cars
-			echo "$info" >> My_old_cars
+			info="$year $make $model" # put car info into string
+			echo "$info" >> My_old_cars # add car info to file
 			;;
 		"lc")
 			sort My_old_cars
 			;;
-		*)
+		   *)
+			echo Not an option, try again.
 	esac
+	# ask for choice again
 	echo Would you like to:
 	echo ac. Add a car
 	echo lc. List the cars in the inventory file
