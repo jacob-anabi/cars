@@ -31,11 +31,12 @@ do
 			read make
 			echo Enter model:
 			read model
-			info="$year $make $model" # put car info into string
+			info="$year:$make:$model" # put car info into string
 			echo "$info" >> My_old_cars # add car info to file
 			;;
 		"lc")
-			sort My_old_cars
+			list=$(sort My_old_cars) # storing list of sorted cars
+			echo "$list" | tr ":" " " # replacing ':' with a space
 			;;
 		   *)
 			echo Not an option, try again.
